@@ -2,13 +2,15 @@ import React from "react";
 
 function ResultList(props) {
   return (
-    <ul className="list-group">
-      {props.results.map(result => (
-        <li className="list-group-item" key={result.id}>
-          <p>{result.email}</p>
-        </li>
-      ))}
-    </ul>
+    <table className="table table-bordered">
+      <tbody>
+        {props.results.map(result => (
+          <tr key={result.id}>
+            <td><img src={result.picture.thumbnail} alt={result.name.first}></img></td><td>{result.name.first}</td><td>{result.name.last}</td><td>{result.email}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
   );
 }
 

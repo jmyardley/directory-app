@@ -18,6 +18,7 @@ class SearchResultContainer extends Component {
       .then(res => {
         var users = (res.data.results);
         this.setState({ results: users });
+        console.log(users);
     })
       .catch(err => console.log(err));
   };
