@@ -18,7 +18,7 @@ class SearchResultContainer extends Component {
         var users = (res.data.results);
         this.setState({ results: users });
         console.log(users);
-    })
+      })
       .catch(err => console.log(err));
   };
 
@@ -39,7 +39,7 @@ class SearchResultContainer extends Component {
   render() {
     return (
       <div>
-
+        <h1> Employees </h1>
         <ResultList results={this.state.results} />
       </div>
     );
